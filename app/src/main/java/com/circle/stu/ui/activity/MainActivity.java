@@ -9,8 +9,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
+import com.arlib.floatingsearchview.FloatingSearchView;
 import com.circle.stu.R;
 import com.circle.stu.base.BaseActivity;
 import com.circle.stu.widget.Fab;
@@ -35,6 +35,10 @@ public class MainActivity extends BaseActivity
     SliderLayout mSliderLayout;
     @BindView(R.id.mCircleIndicator)
     CircleIndicator mCircleIndicator;
+    @BindView(R.id.mSearchView)
+    FloatingSearchView mSearchView;
+    @BindView(R.id.mDrawerLayout)
+    DrawerLayout mDrawerLayout;
 
     @Override
     protected int initViewId() {
@@ -48,6 +52,9 @@ public class MainActivity extends BaseActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        mSearchView.attachNavigationDrawerToMenuButton(mDrawerLayout);
+
     }
 
     private void initSlider() {
@@ -81,25 +88,14 @@ public class MainActivity extends BaseActivity
         mSliderLayout.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                if (position % 4 == 0) {
-                    Toast.makeText(mContext, "House of cards", Toast.LENGTH_SHORT).show();
-                } else if (position % 4 == 1) {
-                    Toast.makeText(mContext, "Big bang theory", Toast.LENGTH_SHORT).show();
-                } else if (position % 4 == 2) {
-                    Toast.makeText(mContext, "Hannibal", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(mContext, "game of thrones", Toast.LENGTH_SHORT).show();
-                }
             }
 
             @Override
             public void onPageSelected(int position) {
-
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
             }
         });
     }
@@ -139,9 +135,8 @@ public class MainActivity extends BaseActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+            mDrawerLayout.closeDrawer(GravityCompat.START);
         } else {
             if (materialSheetFab.isSheetVisible()) {
                 materialSheetFab.hideSheet();
@@ -182,8 +177,7 @@ public class MainActivity extends BaseActivity
 //            agent.startDefaultThreadActivity();
 //        }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 

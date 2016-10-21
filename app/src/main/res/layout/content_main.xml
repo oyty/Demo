@@ -12,7 +12,7 @@
     <com.circle.stu.widget.imageslider.SliderLayout
         android:id="@+id/mSliderLayout"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="260dp"
         app:auto_cycle="true"
         app:indicator_visibility="visible"
         app:pager_animation="Default"
@@ -21,8 +21,8 @@
     <com.circle.stu.widget.imageslider.Indicators.CircleIndicator
         android:id="@+id/mCircleIndicator"
         android:layout_width="match_parent"
-        android:layout_marginTop="192dp"
-        android:layout_height="48dp"  />
+        android:layout_marginTop="230dp"
+        android:layout_height="30dp"  />
 
 
 </RelativeLayout>

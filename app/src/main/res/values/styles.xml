@@ -6,7 +6,6 @@
     </style>
 
     <style name="Base.Theme.Home" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

@@ -18,6 +18,11 @@ public class PublishActivity extends BaseActivity {
     }
 
     @Override
+    protected void initToolbar() {
+
+    }
+
+    @Override
     protected int initViewId() {
         return 0;
     }

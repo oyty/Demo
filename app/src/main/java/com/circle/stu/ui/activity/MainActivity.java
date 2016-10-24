@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.arlib.floatingsearchview.FloatingSearchView;
+import com.avos.avoscloud.AVAnalytics;
 import com.circle.stu.R;
 import com.circle.stu.base.BaseActivity;
 import com.circle.stu.widget.Fab;
@@ -41,6 +42,11 @@ public class MainActivity extends BaseActivity
     DrawerLayout mDrawerLayout;
 
     @Override
+    protected void initToolbar() {
+
+    }
+
+    @Override
     protected int initViewId() {
         return R.layout.activity_main;
     }
@@ -55,6 +61,7 @@ public class MainActivity extends BaseActivity
 
         mSearchView.attachNavigationDrawerToMenuButton(mDrawerLayout);
 
+        AVAnalytics.trackAppOpened(getIntent());
     }
 
     private void initSlider() {

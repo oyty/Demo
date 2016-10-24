@@ -1,18 +1,29 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Base.Theme.Home">
+    <style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Base.Theme.Home" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="AppTheme" parent="AppThemeBase" >
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- AppCompatEditText默认状态状态设置底线颜色 -->
+        <item name="colorControlNormal">@color/text_hint</item>
+        <!-- AppCompatEditText选择的底线颜色 -->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+
+        <item name="android:textColorHint">@color/text_hint</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
+    
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
@@ -68,5 +79,11 @@
         <item name="android:textColor">@color/text_black_87</item>
         <item name="android:drawablePadding">@dimen/sheet_item_image_spacing</item>
     </style>
+
+    <style name="MyButtonStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+    </style>
+
 
 </resources>

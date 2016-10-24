@@ -44,7 +44,12 @@ public class SplashActivity extends AppCompatActivity {
                 if(PreferenceHelper.isFirstIn()) {
                     gotoGuideActivity();
                 } else {
-                    gotoMainActivity();
+                    if(PreferenceHelper.isLogin()) {
+                        gotoMainActivity();
+                    } else {
+                        gotoLoginActivity();
+                    }
+
                 }
             }
 
@@ -52,6 +57,11 @@ public class SplashActivity extends AppCompatActivity {
             public void onAnimationRepeat(Animation animation) {
             }
         });
+    }
+
+    private void gotoLoginActivity() {
+        startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+        finish();
     }
 
     private void gotoMainActivity() {

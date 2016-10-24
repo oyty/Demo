@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#3F51B5</color>
+    <color name="colorPrimary">#2196F3</color><!--500-->
+    <color name="colorPrimaryDark">#1976D2</color><!--700-->
+    <color name="colorAccent">#2196F3</color>
     <color name="publish_transparent">#8000</color>
 
     <color name="theme_primary">#00BCD4</color>
@@ -20,4 +20,14 @@
     <color name="bg_screen2">#20d2bb</color>
     <color name="bg_screen3">#3395ff</color>
     <color name="bg_screen4">#c873f4</color>
+
+
+    <color name="login_primary_color">#E0E0E0</color>
+    <color name="theme_color">#1DA0F2</color>
+    <color name="title_color">#4A4A4A</color>
+    <color name="color_pressed">#881DA0F2</color>
+    <color name="button_not_enable">#8BCAF1</color>
+    <color name="text_hint">#CCCCCC</color>
+    <color name="text_normal">#706e6e</color>
+
 </resources>

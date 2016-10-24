@@ -3,6 +3,7 @@ package com.circle.stu.base;
 import android.app.Activity;
 import android.app.Application;
 
+import com.avos.avoscloud.AVOSCloud;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -24,7 +25,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         instance = this;
-//        AVOSCloud.initialize(this, "Lz2OTyScY2zOi0B6P0jHV339-gzGzoHsz", "Kh0gtBqylMVsA8z6lh2Lylsd");
+        AVOSCloud.initialize(this, "Lz2OTyScY2zOi0B6P0jHV339-gzGzoHsz", "Kh0gtBqylMVsA8z6lh2Lylsd");
 
     }
 

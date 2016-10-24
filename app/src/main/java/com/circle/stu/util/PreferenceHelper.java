@@ -54,4 +54,9 @@ public class PreferenceHelper {
     public static boolean isFirstIn() {
         return getBoolean(Constants.IS_FIRST_IN, true);
     }
+
+    public static boolean isLogin() {
+        
+        return false;
+    }
 }

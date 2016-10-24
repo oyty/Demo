@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_toolbar" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="@dimen/x580"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x100">
+
+        <EditText
+            android:id="@+id/mMobileValue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x80"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/mobile_hint"
+            android:inputType="number"
+            android:textColorHint="@color/text_hint"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="@dimen/x580"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x25">
+
+        <EditText
+            android:id="@+id/mPasswordValue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x80"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColorHint="@color/text_hint"
+            android:textSize="16sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="@dimen/x580"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mNicknameValue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x80"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x25"
+            android:hint="@string/nickname"
+            android:singleLine="true"
+            android:textColorHint="@color/text_hint"
+            android:textSize="16sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/mRegisterAction"
+        android:theme="@style/MyButtonStyle"
+        android:layout_width="@dimen/x580"
+        android:layout_height="@dimen/x100"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x30"
+        android:enabled="false"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:text="@string/register" />
+
+    <Button
+        android:id="@+id/mAgreementAction"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/x400"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x50"
+        android:gravity="center"
+        android:textColor="@color/text_hint"
+        android:text="点击[注册]按钮代表您已阅读并同意学友圈协议"
+        android:textSize="15sp" />
+
+</LinearLayout>

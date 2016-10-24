@@ -19,6 +19,11 @@ public class SettingActivity extends BaseActivity {
     }
 
     @Override
+    protected void initToolbar() {
+
+    }
+
+    @Override
     protected int initViewId() {
         return 0;
     }

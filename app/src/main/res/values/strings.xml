@@ -21,4 +21,12 @@
     <string name="next_page">下一页</string>
     <string name="start">开始体验</string>
     <string name="next">下一页</string>
+    <string name="create_new_account">创建新的账号</string>
+    <string name="forget_password">忘记了密码？</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="mobile_hint">手机号（+86）</string>
+    <string name="password">密码</string>
+    <string name="nickname">昵称</string>
+    <string name="login_account_hint">手机号码/学号</string>
 </resources>

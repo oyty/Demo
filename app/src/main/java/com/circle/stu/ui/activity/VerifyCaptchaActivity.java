@@ -1,5 +1,6 @@
 package com.circle.stu.ui.activity;
 
+import com.circle.stu.R;
 import com.circle.stu.base.BaseActivity;
 
 /**
@@ -14,7 +15,7 @@ public class VerifyCaptchaActivity extends BaseActivity {
 
     @Override
     protected int initViewId() {
-        return 0;
+        return R.layout.activity_verify_captcha;
     }
 
     @Override
